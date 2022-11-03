@@ -1,0 +1,106 @@
+@use "../../../scss/" as *;
+
+
+.coin {
+    width: 95%;
+    @include flex(center, center);
+    padding: 1rem 2rem;
+    margin: .7rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    background-color: #26272b;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: .3s ease-in-out;
+        cursor: pointer;
+    }
+
+    &-label {
+        @include flex(center, unset);
+        padding-right: 24px;
+        min-width: 240px;
+
+        @include tablet {
+            min-width: 150px;
+        }
+
+        @include tablet-sm {
+            min-width: 130px;
+        }
+    }
+
+    &-image {
+        height: 40px;
+        margin-right: 20px;
+        width: auto;
+    }
+
+    &-info {
+        @include flex(center, space-between);
+        width: 100%;
+
+        @include mobile {
+            justify-content: space-around;
+        }
+    }
+
+    &-price {
+        width: 100px;
+
+        @include tablet-sm {
+            width: 70px;
+        }
+    }
+
+    &-name {
+        h3 {
+            color: #646466;
+            font-size: .9rem;
+        }
+    }
+
+    &-change {
+        width: 100px;
+
+        &--green {
+            color: #11d811;
+            width: 100px;
+
+            @include tablet-sm {
+                width: 45px;
+            }
+        }
+
+        &--red {
+            color: #f00606;
+            width: 100px;
+
+            @include tablet-sm {
+                width: 45px;
+            }
+        }
+    }
+
+    &-total {
+        width: 130px;
+
+        @include tablet-sm {
+            width: 90px;
+        }
+    }
+
+    &-cap {
+        width: 110px;
+
+        @include tablet-sm {
+            width: 80px;
+        }
+    }
+}
+
+.hide-mobile {
+    @include mobile {
+        display: none;
+    }
+}

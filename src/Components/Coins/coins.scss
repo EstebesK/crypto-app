@@ -1,0 +1,30 @@
+@use "../../scss/" as *;
+
+button {
+    cursor: pointer;
+}
+
+.header {
+    @include flex(center, unset);
+    flex-direction: column;
+    padding-top: 2rem;
+
+    &>* {
+        margin-bottom: 2rem;
+    }
+}
+
+.btn {
+    margin: 3rem;
+    border: 4px solid transparent;
+    background-color: #60C4B2;
+    color: $txt-color;
+    border-radius: $border-radius;
+    padding: 0.5rem 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    &:hover {
+        background-color: #68d8c3;
+    }
+}

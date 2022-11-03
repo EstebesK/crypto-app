@@ -1,0 +1,21 @@
+@use "../../scss/" as *;
+
+.search-input {
+    border-radius: $border-radius;
+    color: $txt-color;
+
+    font-weight: 700;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: #26272b;
+
+    &::placeholder {
+        color: $txt-color;
+        text-align: center;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
